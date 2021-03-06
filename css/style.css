@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Alternate Gothic;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 a{
@@ -18,25 +18,26 @@ body{
 
 .header{
     height: 100vh;
-    background: url(../img/banner.jpeg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
+    background-image: url(../img/banner.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+
 .nav{
+    width: 100%;
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     padding: 0 50px;
-    background: rgba(
-        0, 
-        0, 
-        0, 0.2);
+    position: fixed;
+}
 
+.navBg{
+    background: rgb(81, 81, 207);
 }
 
 .nav img{
@@ -47,17 +48,25 @@ body{
 .navBtn{
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around;    
+}
+
+.hidden{
+    display: none;
+}
+
+.marginNav{
+    margin: 0 auto;
 }
 
 .navBtn li a{
     font-weight: bold;
     letter-spacing: 2px;
     margin: 0 15px;
-    padding: 10px 35px;
+    padding: 0 10px;
     border-radius: 15px;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .navBtn li a:hover{
@@ -67,11 +76,68 @@ body{
 
 
 /* container */
+.container{
+    background: ;
+    width: 90%;
+    margin: 15px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider img {
+    width: 500px;
+    height: 300px;
+}
+
+.servicesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.servicesContainer > * {
+    flex-basis: 30%;
+}
+
+.ourServices{
+    margin: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.services:hover{
+    background: rgb(189, 189, 189);
+    transition: 0.5s;
+}
+
+.services .title {
+    font-size: 1.6rem;
+}
+
+.services img{
+    width: 150px;
+    height: 150px;
+}
 
 /* footer */
 .footer{
     background: gray;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -83,27 +149,42 @@ body{
     padding: 1px;
 }
 
-.footerTxt{
+.footerContents{
     width: 80%;
     height: 80%;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    color: white;
+    color: black;
 }
 
-.footerTxt .footerHeader{
-    font-size: 4rem;
+.footerCt a {
+    color: black;
 }
 
-.footerTxt p {
+.footerCt{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footerCt .footerHeader{
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.footerContents p {
     font-size: 1.6rem;
+    margin: 5px 0px;
 }
 
 #googleMaps iframe{
-    width: 600px;
-    height:350px;
+    width: 500px;
+    height:320px;
     border:0;
     border-radius: 15px;
 }
