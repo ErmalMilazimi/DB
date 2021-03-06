@@ -4,7 +4,7 @@ const navBtn = document.querySelector(".navBtn");
 const nav = document.querySelector(".nav");
 
 const sectionOneOptions = {
-    rootMargin: "-200px 0px 0px 0px"
+    rootMargin: "-150px 0px 0px 0px"
 };
 
 const sectionOneObesrver = new IntersectionObserver(function(entries,sectionOneOptions){
