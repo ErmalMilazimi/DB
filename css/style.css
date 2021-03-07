@@ -200,24 +200,16 @@ body{
     position: relative;
 }
 
-.footerRight, .footerLeft{
-    top: 0;
-    width: 50.1%;
-    height: 50px;
-    background: white;
+.footer::after{
+    content: '';
+    width: 100%;
+    height: 100px;
+    transform: translate(50%,00%);
+    background: lightblue;
     position: absolute;
-    border: 0;
-}
-
-.footerRight{
-    right: 0;
-    clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 0%);
-    box-shadow: 10px -10px -10px black;
-}
-
-.footerLeft{
-    left: 0;
-    clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 100% 100%);
+    top: -50px;
+    right: 50%;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 100%, 100% 0%);
 }
 
 .footerContents{
@@ -243,7 +235,7 @@ body{
     justify-content: center;
 }
 
-.footerHeader{
+.footerCt .footerHeader{
     font-size: 3rem;
     margin-bottom: 50px;
     cursor: pointer;
@@ -508,7 +500,7 @@ body{
         width: 100%;
     }
 
-    .footerCt .footerHeader{
+    .footerHeader{
         font-size: 2rem;
     }
 
