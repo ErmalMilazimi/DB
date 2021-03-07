@@ -38,7 +38,7 @@ body{
     bottom: 0;
     left: 50%;
     transform: translate(-50%,0%);
-    width: 80%;
+    width: 60%;
 }
 
 .nav{
@@ -353,6 +353,9 @@ body{
         overflow-x: hidden;
     }
 
+    .header{
+        height: 60vh;
+    }
     .nav{
         justify-content: flex-end;
     }
@@ -366,7 +369,14 @@ body{
         transform: translate(50%,40%);       
     }
     
+    .headerBackgroundLogo{
+        width: 50%;
+    }
 
+    .headerBackground{
+        width: 80%;
+    }
+    
     .burger {
         display: block;
         cursor: pointer;
