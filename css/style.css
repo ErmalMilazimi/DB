@@ -27,16 +27,18 @@ body{
 
 .headerBackgroundLogo{
     position: absolute;
-    top: 130px;
-    right: 36%;
-    width: 30%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 35%;
 }
 
 .headerBackground{
     position: absolute;
     bottom: 0;
-    width: 70%;
-    right: 250px;
+    left: 50%;
+    transform: translate(-50%,0%);
+    width: 80%;
 }
 
 .nav{
@@ -81,17 +83,28 @@ body{
     letter-spacing: 2px;
     margin: 0 15px;
     padding: 0 10px;
-    border-radius: 15px;
     color: white;
     font-size: 1.4rem;
 }
 
 .navBtn li a:hover{
     color: black;
-    transition: 0.5s;
+    text-decoration: underline;
+    text-decoration-color: black;
+    transition: 0.2s ease-in;
 }
 
+.burger {
+    display: none;
+}
 
+.burger div{
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background: white;
+    transition: 0.3s ease;
+}
 /* container */
 .container{
     width: 100%;
@@ -102,6 +115,7 @@ body{
     justify-content: center;
     align-items: center;
     background: white;
+    position: relative;
 }
 
 .slider{
@@ -125,7 +139,7 @@ body{
 }
 
 .servicesContainer > * {
-    flex-basis: 40%;
+    flex-basis: 25%;
 }
 
 .ourServices{
@@ -135,24 +149,39 @@ body{
 }
 
 .services{
+    height: 400px;
+    width: 150px;
     display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     transition: 0.5s;
-    margin: 10px;
+    margin: 30px;
+    margin-bottom: 50px;
     padding: 10px;
     border-radius: 15px;
     text-align: center;
+    cursor: pointer;
+    box-shadow:-10px -10px 10px lightgray,
+    10px 10px 10px lightgray,
+     -10px 10px 10px lightgray,
+     10px -10px 10px lightgray;
+    letter-spacing: 1px;
 }
 
 .services:hover{
-    background: rgb(189, 189, 189);
+    background: lightblue;
+    box-shadow:-10px -10px 10px lightblue,
+    10px 10px 10px lightblue,
+     -10px 10px 10px lightblue,
+     10px -10px 10px lightblue;
     transition: 0.5s;
+    color: white;
 }
 
 .services .title {
     font-size: 1.6rem;
+    margin-bottom: 15px;
 }
 
 .services img{
@@ -168,11 +197,33 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+}
+
+.footerRight, .footerLeft{
+    top: 0;
+    width: 50.1%;
+    height: 50px;
+    background: white;
+    position: absolute;
+    border: 0;
+}
+
+.footerRight{
+    right: 0;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 0%);
+    box-shadow: 10px -10px -10px black;
+}
+
+.footerLeft{
+    left: 0;
+    clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 100% 100%);
 }
 
 .footerContents{
     width: 80%;
     height: 80%;
+    margin-top: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -192,14 +243,16 @@ body{
     justify-content: center;
 }
 
-.footerCt .footerHeader{
+.footerHeader{
     font-size: 3rem;
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
 .footerContents p {
     font-size: 1.6rem;
     margin: 5px 0px;
+    cursor: pointer;
 }
 
 .footerCR{
@@ -227,6 +280,19 @@ body{
 
 /* Responsive queries */
 
+@media only screen and (min-height: 1200px){
+    .header{
+        height: 1200px;
+    }
+
+    #googleMaps iframe{
+        width: 600px;
+        height: 400px;
+        border:0;
+        border-radius: 15px;
+    }
+}
+
 @media only screen and (max-width: 1200px){
     .navBtn li a{
         margin: 0 13px;
@@ -249,11 +315,205 @@ body{
     }
     
     .nav img{
-        width: 320px;
-        height: 100px;
+        width: 250px;
+        height: 70px;
     }
     .navBtn li a{
         margin: 0 13px;
         padding: 7px;
+    }
+
+    .services{
+        margin: 20px;
+    }
+
+    .services img{
+        width: 180px;
+        height: 130px;
+    }
+    .services .title {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+    
+    .services p {
+        font-size: 0.8rem;
+    }
+
+    #googleMaps iframe{
+        width: 500px;
+        height:350px;
+        border:0;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav{
+        justify-content: flex-end;
+    }
+
+    .nav img{
+        width: 40%;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        right: 50%;
+        transform: translate(50%,40%);       
+    }
+    
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navBtn{
+        position: absolute;
+        right: 0;
+        top: 80px;
+        height: 100vh;
+        width: 100%;
+        background: lightblue;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+    }
+
+    .navBtnActive{
+        transform: translateX(0%);
+    }
+
+    .navBtn li {
+        margin: 60px 0px;
+        opacity: 0;
+    }
+
+    .navBtn li a{
+        font-size: 1.3rem;
+    }
+
+    .servicesContainer > * {
+        flex-basis: 40%;
+    }
+    .footerContents{
+        padding-top: 50px;
+        flex-direction: column;
+        justify-content:center;
+        text-align: center;
+    }
+
+    .footerCt{
+        width: 80%;
+    }
+
+    #googleMaps{
+        width: 100%;
+        height: 100%;
+        margin-top: 15px;
+    }
+
+    #googleMaps iframe{
+        width: 80%;
+        height:100%;
+        border:0;
+        border-radius: 10px;
+    }
+
+    @keyframes navBtnFade {
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+}
+
+@media only screen and (max-width: 650px){
+    
+    .servicesContainer > * {
+        flex-basis: 80%;
+    }
+    .footerContents{
+        padding-top: 50px;
+        flex-direction: column;
+        justify-content:center;
+        text-align: center;
+    }
+
+    .footerCt{
+        width: 80%;
+    }
+
+    #googleMaps{
+        width: 100%;
+        height: 100%;
+        margin-top: 15px;
+    }
+
+    #googleMaps iframe{
+        width: 80%;
+        height:100%;
+        border:0;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    
+    .servicesContainer > * {
+        flex-basis: 80%;
+    }
+
+    .footer{
+        height: auto;
+    }
+    .footerContents{
+        padding-top: 50px;
+        flex-direction: column;
+        justify-content:center;
+        text-align: center;
+    }
+
+    .footerCt{
+        width: 100%;
+    }
+
+    .footerCt .footerHeader{
+        font-size: 2rem;
+    }
+
+    .footerCt p{
+        font-size: 1rem;
+    }
+
+    #googleMaps{
+        width: 100%;
+        height: 100%;
+        margin-top: 15px;
+    }
+
+    #googleMaps iframe{
+        width: 100%;
+        height:100%;
     }
 }
