@@ -31,25 +31,18 @@
         </div>
 
         <img src="img/logo2.png" alt="logoNav" class="headerBackgroundLogo">
-        <img src="img/banner2.jpg" alt="logoNav" class="headerBackground">
+        <img src="img/banner2-min.jpg" alt="logoNav" class="headerBackground">
         <p class="bannerTxt">-  Ihr Wochenende sollte nicht mit Putzen verschwendet werden, wir werden es tun.</p>
 
     </div>
     <div class="container">
-        <div class="slider">
-            <img src="img/slider1.jpg" alt="">
-            <!-- <div class="slides">
-                <img src="img/banner.jpeg" alt="">
-                <img src="img/slider4.jpg" id="last" alt="">
-                <img src="img/slider1.jpg" alt="">
-                <img src="img/slider2.jpg" alt="">
-                <img src="img/slider3.jpg" alt="">
-                <img src="img/slider4.jpg" alt="">
-                <img src="img/slider1.jpg" id="first" alt="">
-                <p>hello</p>
-            </div>
-            <button class="btnLeft fas fa-chevron-left"></button>
-            <button class="btnRight fas fa-chevron-right"></button> -->
+        <div id="slider">
+            <ul>
+                <li><img src="img/slider1.jpg" alt=""></li>
+                <li><img src="img/slider2.jpg" alt=""></li>
+                <li><img src="img/slider3.jpg" alt=""></li>
+                <li><img src="img/slider4.jpg" alt=""></li>
+              </ul> 
         </div>
 
         <p class="ourServices">Our Services</p>
@@ -117,9 +110,19 @@
         <div class="footerContents">
             <div class="footerCt">
                 <p class="footerHeader">CONTACT US</p>
-                <p>Tel : 032 645 13 51</p>
-                <p><a href="mailto:db-facilitysercive7@gmail.com">Email: email@email.com</a></p>
-                <p>Flurstrasse 33, 2540 Grenchen</p>
+                
+                <div class="footerCtBottom">
+                    <div class="footerIcons">
+                        <p><i class="fas fa-phone"></i></p>
+                        <p><i class="fas fa-envelope"></i></p>
+                        <p><i class="fas fa-map-marker-alt"></i></p>
+                    </div>
+                    <div class="footerTxt">
+                        <p>032 645 13 51</p>
+                        <p><a href="mailto:db-facilitysercive7@gmail.com">email@email.com</a></p>
+                        <p>Flurstrasse 33, 2540 Grenchen</p>
+                    </div>
+                </div>
             </div>
             <div id="googleMaps">
                 <iframe
@@ -136,7 +139,8 @@
 
     <script src="js/navObserver.js"></script>
     <script src="js/navResponsive.js"></script>
-    <!-- <script src="js/slider.js"></script> -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>
