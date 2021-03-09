@@ -14,13 +14,19 @@
 <body>
     <div class="header">
         <div class="nav ">
+            <div class="languages">
+                <input type="radio" name="language" id="ger" class="hidden" onclick="changeGer()">
+                <input type="radio" name="language" id="eng" class="hidden" onclick="changeEng()">
+                <label for="ger">GER</label>
+                <label for="eng">ENG</label>
+            </div>
             <a href="index.html" class="logoImg hidden">
                 <img src="img/logo2.png" alt="logoNav">
             </a>
             <ul class="navBtn marginNav">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="index.html">GALLERY</a></li>
-                <li><a href="index.html">CONTACT</a></li>
+                <li><a href="index.html" id="navButtons1">HOME</a></li>
+                <li><a href="gallery.html" id="navButtons2">GALLERY</a></li>
+                <li><a href="contact.html" id="navButtons3">CONTACT</a></li>
             </ul>
 
             <div class="burger">
@@ -32,7 +38,7 @@
 
         <img src="img/logo2.png" alt="logoNav" class="headerBackgroundLogo">
         <img src="img/banner2-min.jpg" alt="logoNav" class="headerBackground">
-        <p class="bannerTxt">-  Ihr Wochenende sollte nicht mit Putzen verschwendet werden, wir werden es tun.</p>
+        <p class="bannerTxt" id="bannerTxt">-  Ihr Wochenende sollte nicht mit Putzen verschwendet werden, wir werden es tun.</p>
 
     </div>
     <div class="container">
@@ -126,7 +132,7 @@
             </div>
             <div id="googleMaps">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1398134.5124977594!2d7.103204244081367!3d46.809595281477876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c64ef6f596d61%3A0x5c56b5110fcb7b15!2sSwitzerland!5e0!3m2!1sen!2s!4v1614967055364!5m2!1sen!2s"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2711.075297854528!2d7.409176015766039!3d47.195538724276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e2096122a842f%3A0x6b97c61ab80c4c71!2sFlurstrasse%2033%2C%202540%20Grenchen%2C%20Switzerland!5e0!3m2!1sen!2s!4v1615252541922!5m2!1sen!2s"
                     allowfullscreen loading="lazy" frameborder="0">
                 </iframe>
 
@@ -141,6 +147,7 @@
     <script src="js/navResponsive.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/language.js"></script>
 </body>
 
 </html>
