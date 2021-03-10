@@ -15,13 +15,19 @@
 <body>
     <div class="header contactHeader">
         <div class="nav ">
+            <div class="languages langCenter">
+                <input type="radio" name="language" id="ger" class="hidden" onclick="changeGer()" checked>
+                <input type="radio" name="language" id="eng" class="hidden" onclick="changeEng()">
+                <label for="ger" class="languagesBtn gerBtn">GER</label>
+                <label for="eng" class="languagesBtn engBtn">ENG</label>
+            </div>
             <a href="index.html" class="logoImg hidden">
                 <img src="img/logo2.png" alt="logoNav">
             </a>
             <ul class="navBtn marginNav">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="gallery.html">GALLERY</a></li>
-                <li><a href="index.html">CONTACT</a></li>
+                <li><a href="index.html">ZUHAUSE</a></li>
+                <li><a href="gallery.html">GALERIE</a></li>
+                <li><a href="contact.html">KONTAKT</a></li>
             </ul>
 
             <div class="burger">
@@ -35,7 +41,7 @@
 
     </div>
     <div class="container">
-        <p class="ourServices">Contact</p>
+        <p class="ourServices">Kontakt</p>
         <div class="contents">
             <div class="contacts">
                 <p><i class="fas fa-phone"></i>032 645 13 51</p>
@@ -60,6 +66,7 @@
 
     <script src="js/navObserver.js"></script>
     <script src="js/navResponsive.js"></script>
+    <script src="js/language.js"></script>
 </body>
 
 </html>

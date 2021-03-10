@@ -14,19 +14,19 @@
 <body>
     <div class="header">
         <div class="nav ">
-            <div class="languages">
-                <input type="radio" name="language" id="ger" class="hidden" onclick="changeGer()">
+            <div class="languages langCenter">
+                <input type="radio" name="language" id="ger" class="hidden" onclick="changeGer()" checked>
                 <input type="radio" name="language" id="eng" class="hidden" onclick="changeEng()">
-                <label for="ger">GER</label>
-                <label for="eng">ENG</label>
+                <label for="ger" class="languagesBtn gerBtn">GER</label>
+                <label for="eng" class="languagesBtn engBtn">ENG</label>
             </div>
             <a href="index.html" class="logoImg hidden">
                 <img src="img/logo2.png" alt="logoNav">
             </a>
             <ul class="navBtn marginNav">
-                <li><a href="index.html" id="navButtons1">HOME</a></li>
-                <li><a href="gallery.html" id="navButtons2">GALLERY</a></li>
-                <li><a href="contact.html" id="navButtons3">CONTACT</a></li>
+                <li><a href="index.html">ZUHAUSE</a></li>
+                <li><a href="gallery.html">GALERIE</a></li>
+                <li><a href="contact.html">KONTAKT</a></li>
             </ul>
 
             <div class="burger">
@@ -38,7 +38,7 @@
 
         <img src="img/logo2.png" alt="logoNav" class="headerBackgroundLogo">
         <img src="img/banner2-min.jpg" alt="logoNav" class="headerBackground">
-        <p class="bannerTxt" id="bannerTxt">-  Ihr Wochenende sollte nicht mit Putzen verschwendet werden, wir werden es tun.</p>
+        <p class="bannerTxt">-  Ihr Wochenende sollte nicht mit Putzen verschwendet werden, wir werden es tun.</p>
 
     </div>
     <div class="container">
@@ -49,15 +49,16 @@
                 <li><img src="img/slider3.jpg" alt=""></li>
                 <li><img src="img/slider4.jpg" alt=""></li>
               </ul> 
+              <div class="sliderLink" onclick="window.location='gallery.html';"><p>Mehr Sehen</p></div>
         </div>
 
-        <p class="ourServices">Our Services</p>
+        <p class="ourServices">Unsere Leistungen</p>
         <div class="servicesContainer">
             <div class="services">
                 <img src="img/pastrimgjamav.jpg" alt="">
                 <div>
-                    <p class="title">Service 1</p>
-                    <p class="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint excepturi quaerat dolores
+                    <p class="title">Bedienung 1</p>
+                    <p class="servicesTxt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint excepturi quaerat dolores
                         voluptatem, exercitationem cumque! Saepe voluptatum est odit rerum?</p>
 
                 </div>
@@ -65,17 +66,16 @@
             <div class="services">
                 <img src="img/fshisa.jpg" alt="">
                 <div>
-                    <p class="title">Service 2</p>
-                    <p class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo voluptates totam eveniet
-                        non. Sed minus ullam ducimus, repellat eius adipisci?</p>
+                    <p class="title">Bedienung 2</p>
+                    <p class="servicesTxt">s ullam ducimus, repellat eius adipisci?</p>
 
                 </div>
             </div>
             <div class="services">
                 <img src="img/garden.png" alt="">
                 <div>
-                    <p class="title">Service 3</p>
-                    <p class="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint excepturi quaerat dolores
+                    <p class="title">Bedienung 3</p>
+                    <p class="servicesTxt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint excepturi quaerat dolores
                         voluptatem, exercitationem cumque! Saepe voluptatum est odit rerum?</p>
 
                 </div>
@@ -83,8 +83,8 @@
             <div class="services">
                 <img src="img/spreji.png" alt="">
                 <div>
-                    <p class="title">Service 4</p>
-                    <p class="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint excepturi quaerat dolores
+                    <p class="title">Bedienung 4</p>
+                    <p class="servicesTxt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint excepturi quaerat dolores
                         voluptatem, exercitationem cumque! Saepe voluptatum est odit rerum?</p>
 
                 </div>
@@ -92,8 +92,8 @@
             <div class="services">
                 <img src="img/service5.jpg" alt="">
                 <div>
-                    <p class="title">Service 6</p>
-                    <p class="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint excepturi quaerat dolores
+                    <p class="title">Bedienung 5</p>
+                    <p class="servicesTxt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint excepturi quaerat dolores
                         voluptatem, exercitationem cumque! Saepe voluptatum est odit rerum?</p>
 
                 </div>
@@ -102,7 +102,7 @@
                 <img src="img/service7.jpg" alt="">
                 <div>
                     <p class="title">Service 6</p>
-                    <p class="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint excepturi quaerat dolores
+                    <p class="servicesTxt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint excepturi quaerat dolores
                         voluptatem, exercitationem cumque! Saepe voluptatum est odit rerum?</p>
 
                 </div>
@@ -115,7 +115,7 @@
 
         <div class="footerContents">
             <div class="footerCt">
-                <p class="footerHeader">CONTACT US</p>
+                <p class="footerHeader">Kontaktiere Uns</p>
                 
                 <div class="footerCtBottom">
                     <div class="footerIcons">

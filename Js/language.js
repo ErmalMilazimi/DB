@@ -1,35 +1,76 @@
-// var dataReload = document.querySelectorAll("[data-reload]");
-
 var language = {
     eng : {
         home:"HOME",
         contact:"CONTACT",
         gallery:"GALLERY",
-        banner:"-  Your weekend should not be wasted on cleaning, we will do it."
+        banner:"-  Your weekend should not be wasted on cleaning, we will do it.",
+        ourServices:"Our Services",
+        services:"Services Eng",
+        footerHeader: "Contact Us",
+        slider:"See More"
     },
     ger : {
-        home:"HOMES",
+        home:"ZUHAUSE",
         contact:"KONTAKT",
         gallery:"GALERIE",
-        banner:"-  Ihr Wochenende sollte nicht mit Putzen verschwendet werden, wir werden es tun."
+        banner:"-  Ihr Wochenende sollte nicht mit Putzen verschwendet werden, wir werden es tun.",
+        ourServices:"Unsere Leistungen",
+        services:"Bedienung Ger",
+        footerHeader: "Kontaktiere Uns",
+        slider:"Mehr sehen"
     }
 };
 
-var btn =  document.querySelectorAll('input[name="language"]');
-var navb1 = document.getElementById("navButtons1");
-var navb2 = document.getElementById("navButtons2");
-var navb3 = document.getElementById("navButtons3");
-var bannerTxt = document.getElementById("bannerTxt");
+var navButtons = document.querySelectorAll('.navBtn li a');
+var bannerTxt = document.querySelector(".bannerTxt");
+var ourServices = document.querySelector(".ourServices")
+var services = document.querySelectorAll(".title");
+var footerHeader = document.querySelector(".footerHeader");
+var sliderLink = document.querySelector(".sliderLink p");
+
 function changeGer(){
-    navb1.childNodes[0].textContent = language.ger.home;
-    navb2.childNodes[0].textContent = language.ger.gallery;
-    navb3.childNodes[0].textContent = language.ger.contact;
-    bannerTxt.childNodes[0].textContent = language.ger.banner;
+    navButtons[0].childNodes[0].textContent = language.ger.home;
+    navButtons[1].childNodes[0].textContent = language.ger.gallery;
+    navButtons[2].childNodes[0].textContent = language.ger.contact;
+    if(bannerTxt != null){
+        bannerTxt.childNodes[0].textContent = language.ger.banner;
+    }
+    if(sliderLink != null){
+        sliderLink.childNodes[0].textContent = language.ger.slider;
+    }
+    if(services != null){
+        console.log(services.length);
+        for(i = 0; i < services.length; i++){
+            services[i].childNodes[0].textContent = language.ger.services;
+        }
+    }
+    if(ourServices != null){
+        ourServices.childNodes[0].textContent = language.ger.ourServices;
+    }
+    if(footerHeader != null){
+        footerHeader.childNodes[0].textContent = language.ger.footerHeader;
+    }
 }
 
 function changeEng(){
-    navb1.childNodes[0].textContent = language.eng.home;
-    navb2.childNodes[0].textContent = language.eng.gallery;
-    navb3.childNodes[0].textContent = language.eng.contact;
-    bannerTxt.childNodes[0].textContent = language.eng.banner;
+    navButtons[0].childNodes[0].textContent = language.eng.home;
+    navButtons[1].childNodes[0].textContent = language.eng.gallery;
+    navButtons[2].childNodes[0].textContent = language.eng.contact;
+    if(bannerTxt != null){
+        bannerTxt.childNodes[0].textContent = language.eng.banner;
+    }
+    if(sliderLink != null){
+        sliderLink.childNodes[0].textContent = language.eng.slider;
+    }
+    if(ourServices != null){
+        ourServices.childNodes[0].textContent = language.eng.ourServices;
+    }
+    if(services != null){
+        for(i = 0; i < services.length; i++){
+            services[i].childNodes[0].textContent = language.eng.services;
+        }
+    }
+    if(footerHeader != null){
+        footerHeader.childNodes[0].textContent = language.eng.footerHeader;
+    }
 }
