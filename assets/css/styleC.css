@@ -1,0 +1,88 @@
+.contactHeader{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    background: whitesmoke;
+}
+.headerLogoContact{
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+}
+.contents{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.contacts{
+    width: 70%;
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.contacts a{
+    color: rgba(0, 0, 0, 0.5);
+}
+.contacts > * {
+    flex-basis: 45%;
+}
+.contacts p {
+    margin: 15px;
+}
+.contacts p i {
+    margin-right: 10px;
+}
+.contact-map{
+    width: 80%;
+    height: 30vh;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.contact-map iframe{
+    width: 100%;
+    height: 100%;
+}
+.footerContact{
+    background: lightblue;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+}
+@media only screen and (max-width: 1250px), (min-height: 1200px){
+    .contacts{
+        font-size: 1.8rem;
+        height: auto;
+    }
+    .contact-map{
+        height: auto;
+    }
+}
+@media only screen and (max-width: 1250px){
+    .contacts > * {
+        flex-basis: 80%;
+    }
+}
+@media only screen and (max-width: 650px){
+    .contactHeader{
+        height: 30vh;
+    }
+    .contacts{
+        font-size: 1.5rem;
+    }
+    .contacts > * {
+        flex-basis: 90%;
+    }
+}
