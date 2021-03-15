@@ -15,7 +15,7 @@ var language = {
         s5Title:"Environment Friendly",
         s6Title:"Clean Environment",
         s1:"We are fully bonded and insured, meaning you can have peace of mind when we enter your home.",
-        s2:"A clean work environment put people at ease and tidiness is key to efficiency. With our certified team and all tools & supplies, we provide tidy work",
+        s2:"A clean work environment put people at ease and tidiness is key to efficiency. With our certified team and all tools & supplies, we provide tidy work.",
         s3:"It’s important to have a clean mattress to keep you relaxed and comfortable. We provide eco-friendly and safe cleaning of your mattress using the most modern and advanced technology.",
         s4:"An important part of keeping your garden looking nice and tidy is mowing the lawn regularly. We can safely do that for you every week.",
         s5:"We as a company are committed to using cleaning products that are environmentally responsible, sustainable, and safe for the Earth.",
@@ -42,6 +42,28 @@ var language = {
         s4:"Ein wichtiger Teil dafür, dass Ihr Garten schön und ordentlich aussieht, ist das regelmäßige Mähen des Rasens. Das können wir sicher jede Woche für Sie tun.",
         s5:"Wir als Unternehmen verpflichten uns, Reinigungsprodukte zu verwenden, die umweltbewusst, nachhaltig und sicher für die Erde sind.",
         s6:"Unsere Tiefenreinigung umfasst alle Leistungen einer Standardreinigung mit zusätzlichem Dämpfen und Desinfizieren."
+    },
+    fre : {
+        home:"DOMICILE",
+        contact:"CONTACT",
+        gallery:"GALERIE",
+        banner:"-  Votre week-end ne doit pas être gaspillé en ménage, nous le ferons.",
+        ourServices:"Nos Services",
+        footerHeader: "Nous contacter",
+        galleryHeader:"Travaux réalisés par nos soins",
+        slider:"En savoir plus",
+        s1Title:"Nettoyage de la maison",
+        s2Title:"Nettoyage de bureaux",
+        s3Title:"Nettoyage de matelas",
+        s4Title:"Nettoyage de jardin",
+        s5Title:"Écologique",
+        s6Title:"Environnement propre",
+        s1:"Nous sommes entièrement cautionnés et assurés, ce qui signifie que vous pouvez avoir l'esprit tranquille lorsque nous entrons dans votre maison.",
+        s2:"Un environnement de travail propre met les gens à l'aise et la propreté est la clé de l'efficacité. Avec notre équipe certifiée et tous les outils et fournitures, nous fournissons un travail soigné.",
+        s3:"Il est important d'avoir un matelas propre pour que vous soyez détendu et confortable. Nous assurons un nettoyage écologique et sûr de votre matelas en utilisant la technologie la plus moderne et la plus avancée.",
+        s4:"Une partie importante pour garder votre jardin beau et bien rangé est de tondre la pelouse régulièrement. Nous pouvons le faire pour vous en toute sécurité chaque semaine.",
+        s5:"En tant qu'entreprise, nous nous engageons à utiliser des produits de nettoyage respectueux de l'environnement, durables et sans danger pour la Terre.",
+        s6:"Notre nettoyage en profondeur comprend tous les services d'un nettoyage standard avec vapeur supplémentaire et désinfection."
     }
 };
 
@@ -132,5 +154,45 @@ function changeEng(){
         servicesTxt[3].childNodes[0].textContent = language.eng.s4;
         servicesTxt[4].childNodes[0].textContent = language.eng.s5;
         servicesTxt[5].childNodes[0].textContent = language.eng.s6;
+    }
+}
+
+function changeFre(){
+    navButtons[0].childNodes[0].textContent = language.fre.home;
+    navButtons[1].childNodes[0].textContent = language.fre.gallery;
+    navButtons[2].childNodes[0].textContent = language.fre.contact;
+    if(bannerTxt != null){
+        bannerTxt.childNodes[0].textContent = language.fre.banner;
+    }
+    if(sliderLink != null){
+        sliderLink.childNodes[0].textContent = language.fre.slider;
+    }
+    if(ourServices != null){
+        ourServices.childNodes[0].textContent = language.fre.ourServices;
+    }
+    if(contactPage != null){
+        contactPage.childNodes[0].textContent = language.fre.contact;
+    }
+    if(footerHeader != null){
+        footerHeader.childNodes[0].textContent = language.fre.footerHeader;
+    }
+    if(galleryHeader != null){
+        galleryHeader.childNodes[0].textContent = language.fre.galleryHeader;
+    }
+    if(services != null){
+        services[0].childNodes[0].textContent = language.fre.s1Title;
+        services[1].childNodes[0].textContent = language.fre.s2Title;
+        services[2].childNodes[0].textContent = language.fre.s3Title;
+        services[3].childNodes[0].textContent = language.fre.s4Title;
+        services[4].childNodes[0].textContent = language.fre.s5Title;
+        services[5].childNodes[0].textContent = language.fre.s6Title;
+    }
+    if(servicesTxt != null){
+        servicesTxt[0].childNodes[0].textContent = language.fre.s1;
+        servicesTxt[1].childNodes[0].textContent = language.fre.s2;
+        servicesTxt[2].childNodes[0].textContent = language.fre.s3;
+        servicesTxt[3].childNodes[0].textContent = language.fre.s4;
+        servicesTxt[4].childNodes[0].textContent = language.fre.s5;
+        servicesTxt[5].childNodes[0].textContent = language.fre.s6;
     }
 }

@@ -111,6 +111,11 @@ body{
     border: 2px solid lightgreen;
     margin: 3px;
 }
+#fre:checked~.ferBtn{
+    color: lightgreen;
+    border: 2px solid lightgreen;
+    margin: 3px;
+}
 
 .hidden{
     display: none;
@@ -479,9 +484,9 @@ body{
         height: 130px;
     }
     .services .title {
+        font-size: 1.3rem;
         margin-bottom: 10px;
     }
-    
     .services p {
         font-size: 0.8rem;
     }
