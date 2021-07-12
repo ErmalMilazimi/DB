@@ -132,13 +132,13 @@ body{
     padding: 0 10px;
     color: white;
     font-size: 1.4rem;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.2s;
 }
 
 .navBtn li a:hover{
-    color: black;
-    text-decoration: underline;
-    text-decoration-color: black;
-    transition: 0.2s ease-in;
+    border: 2px solid white;
 }
 
 .burger {
